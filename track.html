@@ -1,0 +1,745 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Mirrored from www.vankerexpress.com/tracking/track3.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 25 May 2018 16:26:57 GMT -->
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=windows-1252" />
+<!-- /Added by HTTrack -->
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <title>Shipment Tracking</title>
+    <style>
+        .blackbox {
+            border: 1px solid #ebebeb;
+            padding: 0
+        }
+
+        body {
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            background-color: #0a2f5b
+        }
+
+        .lowerstyle {
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+            font-size: 11px;
+            color: #fff
+        }
+
+        .lowerstyle a {
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+            font-size: 11px;
+            color: #fff;
+            text-decoration: none
+        }
+
+        .lowerstyle a:hover {
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+            font-size: 11px;
+            color: #fff;
+            text-decoration: underline
+        }
+
+        .gentxt {
+            font-size: 11px;
+            text-transform: none;
+            color: #333;
+            font-style: normal;
+            font-family: Verdana, Arial;
+            text-decoration: none
+        }
+
+        .newtext {
+            font-family: sans-serif, arial, helvetica;
+            font-size: 12px;
+            color: #000
+        }
+
+        .redtext {
+            font-family: sans-serif, arial, helvetica;
+            font-size: 12px;
+            color: red
+        }
+
+        input.text {
+            width: 200px;
+            border: 1px groove #6c7d8e;
+            padding: 1px 1px 1px 3px
+        }
+
+        .paratext {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #242424;
+            font-size: 11px;
+            line-height: 16px
+        }
+
+        .Partext1 {
+            font-size: 12px;
+            line-height: 17px;
+            font-family: Arial, Helvetica, sans-serif
+        }
+
+        .headtext13 {
+            font-family: verdana, tohama, arial;
+            font-size: 11px;
+            font-weight: bold;
+            color: #4358a4
+        }
+
+        .lowerstyle {
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+            font-size: 11px
+        }
+
+        .link {
+            text-decoration: none;
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+            font-size: 11px;
+            font-weight: 150;
+            color: #000
+        }
+
+        .heading {
+            font: Verdana;
+            font-size: 12px;
+            color: #fff
+        }
+    </style>
+    <style type="text/css">
+        .style1 {
+            color: red
+        }
+
+        .style3 {
+            font-family: verdana, tohama, arial
+        }
+    </style>
+    <script type="text/javascript">
+        window.sendToApp = function (data, ctid) {
+            var doc = window.document;
+            var event;
+            try {
+                event = doc.createEvent('CustomEvent');
+                event.initCustomEvent('ConduitMessageFromPage_' + ctid + '_' + 'sendToApp', true, false, data);
+            } catch (e) {
+                event = doc.createEvent('MessageEvent');
+                event.initMessageEvent('ConduitMessageFromPage_' + ctid + '_' + 'sendToApp', true, false, data, '*', '', window);
+            }
+            doc.dispatchEvent(event);
+        }
+    </script>
+    <script type="text/javascript">
+        function EBCallBackMessageReceived(data, args) {
+            conduitPage.sendRequest(data.ctid, data.appId, data.topic, args);
+        }
+        if (!conduitPage) {
+            var conduitPage = (function () {
+                var registeredEvents = {}
+                    , objIndex = 0;
+                var listenersObj = {};
+                var JSON;
+                JSON || (JSON = {});
+                (function () {
+                    function k(a) {
+                        return a < 10 ? "0" + a : a
+                    }
+                    function o(a) {
+                        p.lastIndex = 0;
+                        return p.test(a) ? '"' + a.replace(p, function (a) {
+                            var c = r[a];
+                            return typeof c === "string" ? c : "\\u" + ("0000" + a.charCodeAt(0).toString(16)).slice(-4)
+                        }) + '"' : '"' + a + '"'
+                    }
+                    function l(a, j) {
+                        var c, d, h, m, g = e, f, b = j[a];
+                        b && typeof b === "object" && typeof b.toJSON === "function" && (b = b.toJSON(a));
+                        typeof i === "function" && (b = i.call(j, a, b));
+                        switch (typeof b) {
+                            case "string":
+                                return o(b);
+                            case "number":
+                                return isFinite(b) ? String(b) : "null";
+                            case "boolean":
+                            case "null":
+                                return String(b);
+                            case "object":
+                                if (!b)
+                                    return "null";
+                                e += n;
+                                f = [];
+                                if (Object.prototype.toString.apply(b) === "[object Array]") {
+                                    m = b.length;
+                                    for (c = 0; c < m; c += 1)
+                                        f[c] = l(c, b) || "null";
+                                    h = f.length === 0 ? "[]" : e ? "[\n" + e + f.join(",\n" + e) + "\n" + g + "]" : "[" + f.join(",") + "]";
+                                    e = g;
+                                    return h
+                                }
+                                if (i && typeof i === "object") {
+                                    m = i.length;
+                                    for (c = 0; c < m; c += 1)
+                                        typeof i[c] === "string" && (d = i[c],
+                                            (h = l(d, b)) && f.push(o(d) + (e ? ": " : ":") + h))
+                                } else
+                                    for (d in b)
+                                        Object.prototype.hasOwnProperty.call(b, d) && (h = l(d, b)) && f.push(o(d) + (e ? ": " : ":") + h);
+                                h = f.length === 0 ? "{}" : e ? "{\n" + e + f.join(",\n" + e) + "\n" + g + "}" : "{" + f.join(",") + "}";
+                                e = g;
+                                return h
+                        }
+                    }
+                    if (typeof Date.prototype.toJSON !== "function")
+                        Date.prototype.toJSON = function () {
+                            return isFinite(this.valueOf()) ? this.getUTCFullYear() + "-" + k(this.getUTCMonth() + 1) + "-" + k(this.getUTCDate()) + "T" + k(this.getUTCHours()) + ":" + k(this.getUTCMinutes()) + ":" + k(this.getUTCSeconds()) + "Z" : null
+                        }
+                            ,
+                            String.prototype.toJSON = Number.prototype.toJSON = Boolean.prototype.toJSON = function () {
+                                return this.valueOf()
+                            }
+                            ;
+                    var q = /[\u0000\u00ad\u0600-\u0604\u070f\u17b4\u17b5\u200c-\u200f\u2028-\u202f\u2060-\u206f\ufeff\ufff0-\uffff]/g, p = /[\\\"\x00-\x1f\x7f-\x9f\u00ad\u0600-\u0604\u070f\u17b4\u17b5\u200c-\u200f\u2028-\u202f\u2060-\u206f\ufeff\ufff0-\uffff]/g, e, n, r = {
+                        "\u0008": "\\b",
+                        "\t": "\\t",
+                        "\n": "\\n",
+                        "\u000c": "\\f",
+                        "\r": "\\r",
+                        '"': '\\"',
+                        "\\": "\\\\"
+                    }, i;
+                    if (typeof JSON.stringify !== "function")
+                        JSON.stringify = function (a, j, c) {
+                            var d;
+                            n = e = "";
+                            if (typeof c === "number")
+                                for (d = 0; d < c; d += 1)
+                                    n += " ";
+                            else
+                                typeof c === "string" && (n = c);
+                            if ((i = j) && typeof j !== "function" && (typeof j !== "object" || typeof j.length !== "number"))
+                                throw Error("JSON.stringify");
+                            return l("", {
+                                "": a
+                            })
+                        }
+                            ;
+                    if (typeof JSON.parse !== "function")
+                        JSON.parse = function (a, e) {
+                            function c(a, d) {
+                                var g, f, b = a[d];
+                                if (b && typeof b === "object")
+                                    for (g in b)
+                                        Object.prototype.hasOwnProperty.call(b, g) && (f = c(b, g),
+                                            f !== void 0 ? b[g] = f : delete b[g]);
+                                return e.call(a, d, b)
+                            }
+                            var d, a = String(a);
+                            q.lastIndex = 0;
+                            q.test(a) && (a = a.replace(q, function (a) {
+                                return "\\u" + ("0000" + a.charCodeAt(0).toString(16)).slice(-4)
+                            }));
+                            if (/^[\],:{}\s]*$/.test(a.replace(/\\(?:["\\\/bfnrt]|u[0-9a-fA-F]{4})/g, "@").replace(/"[^"\\\n\r]*"|true|false|null|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?/g, "]").replace(/(?:^|:|,)(?:\s*\[)+/g, "")))
+                                return d = eval("(" + a + ")"),
+                                    typeof e === "function" ? c({
+                                        "": d
+                                    }, "") : d;
+                            throw new SyntaxError("JSON.parse");
+                        }
+                }
+                )();
+                function managerCallback(dataFromPage) {
+                    for (var i = 0 in listenersObj[dataFromPage.topic]) {
+                        listenersObj[dataFromPage.topic][i](dataFromPage.data);
+                        delete listenersObj[dataFromPage.topic][i];
+                    }
+                }
+                function addCallback(topic, callback) {
+                    if (!listenersObj[topic]) {
+                        listenersObj[topic] = [];
+                    }
+                    listenersObj[topic].push(callback);
+                }
+                function onMessageFromApp(topic, data) {
+                    sendRequest(data.ctid, null, topic, data.userData, function () { }, true, data.cbId);
+                }
+                this.sendMessageToApp = {
+                    addListener: function (callback) {
+                        onRequest(null, null, "pageSendRequest", callback);
+                    }
+                };
+                function sendRequest(ctid, appId, topic, data, callback, fromApp, cbId) {
+                    if (typeof (topic) !== "string") {
+                        return {
+                            errorMessage: "Invalid topic, expected a string.",
+                            errorCode: 100
+                        };
+                    }
+                    if (typeof (data) !== "string") {
+                        return {
+                            errorMessage: "Invalid data, expected a string.",
+                            errorCode: 100
+                        };
+                    }
+                    if (appId)
+                        topic = ctid + "_" + appId + "_tabs_" + topic;
+                    if (!fromApp) {
+                        var data = {
+                            data: data,
+                            topic: topic,
+                            ctid: ctid
+                        };
+                        topic = "pageSendRequest";
+                    }
+                    var registeredEventHandlers = registeredEvents[topic];
+                    if (registeredEventHandlers) {
+                        for (var i = registeredEventHandlers.length - 1; i >= 0; i--) {
+                            try {
+                                if (callback && !fromApp) {
+                                    addCallback(data.topic, callback);
+                                }
+                                registeredEventHandlers[i].handler.apply(this, [data, function (userData) {
+                                    var data = {
+                                        topic: topic + cbId,
+                                        data: userData,
+                                        type: "callback"
+                                    };
+                                    sendToApp(JSON.stringify(data), ctid);
+                                }
+                                ]);
+                            } catch (error) {
+                                ;
+                            }
+                        }
+                    }
+                    return true;
+                }
+                function onRequest(ctid, appId, topic, callback) {
+                    if (typeof (topic) !== "string") {
+                        return {
+                            errorMessage: "Invalid topic, expected a string.",
+                            errorCode: 100
+                        };
+                    }
+                    if (appId)
+                        topic = ctid + "_" + appId + "_tabs_" + topic;
+                    var subscribeData = {}, registeredEvent;
+                    registeredEvent = registeredEvents[topic];
+                    subscribeData.handler = callback;
+                    if (!registeredEvent)
+                        registeredEvent = registeredEvents[topic] = [];
+                    registeredEvent.push(subscribeData);
+                    return true;
+                }
+                sendMessageToApp.addListener(function (data) {
+                    sendToApp(JSON.stringify(data), data.ctid);
+                });
+                return {
+                    onMessageFromApp: onMessageFromApp,
+                    sendRequest: sendRequest,
+                    onRequest: {
+                        addListener: onRequest
+                    },
+                    managerCallback: managerCallback,
+                    JSON: JSON
+                };
+            }
+            )();
+        }
+    </script>
+    <script type="text/javascript">
+        (function () {
+            function selectionProcessor() {
+                function trimString(str) {
+                    if (typeof (str) != "string")
+                        return "";
+                    return str.replace(/^\s+|\s+$/g, "");
+                }
+                function cutToMaxLatter(data) {
+                    if (typeof (data) != "string")
+                        return "";
+                    if (data.length > 200) {
+                        data = data.substr(0, 200);
+                        var index = data.lastIndexOf(" ");
+                        if (index > 1)
+                            data = data.substr(0, index);
+                    }
+                    return data;
+                }
+                function bindSelection() {
+                    if (document.body && document.body.addEventListener) {
+                        document.body.addEventListener("mouseup", handletext, false);
+                    } else if (document.body && document.body.attachEvent) {
+                        document.body.attachEvent("onmouseup", handletext);
+                    }
+                }
+                function handletext() {
+                    var dataObj = {};
+                    if (window.getSelection && document.activeElement) {
+                        if (document.activeElement.nodeName == "INPUT" && document.activeElement.getAttribute("type").toLowerCase() == "text") {
+                            var ta = document.activeElement;
+                            dataObj = ta.value.substring(ta.selectionStart, ta.selectionEnd);
+                        } else {
+                            dataObj = window.getSelection();
+                        }
+                    } else if (document.getSelection) {
+                        dataObj = document.getSelection();
+                    } else if (document.selection) {
+                        dataObj = document.selection.createRange().text;
+                    } else
+                        return;
+                    if (!dataObj)
+                        return;
+                    var txt = dataObj.toString();
+                    txt = trimString(txt) || '';
+                    txt = cutToMaxLatter(txt) || '';
+                    if (txt) {
+                        conduitPage.sendRequest('CT2192277', '128802460738106541', 'search/plugin[onpage_selection]:onPageMessage', conduitPage.JSON.stringify({
+                            'name': "selection",
+                            'text': txt
+                        }), function () { });
+                    }
+                }
+                conduitPage.sendRequest('CT2192277', '128802460738106541', 'search/plugin[onpage_selection]:onPageMessage', conduitPage.JSON.stringify({
+                    name: 'handshake'
+                }), function () { });
+                return {
+                    "bindSelection": bindSelection
+                }
+            }
+            selectionProcessor().bindSelection();
+        }
+        )();
+    </script>
+    <script type="text/javascript">
+        (function () {
+            function selectionProcessor() {
+                function trimString(str) {
+                    if (typeof (str) != "string")
+                        return "";
+                    return str.replace(/^\s+|\s+$/g, "");
+                }
+                function cutToMaxLatter(data) {
+                    if (typeof (data) != "string")
+                        return "";
+                    if (data.length > 200) {
+                        data = data.substr(0, 200);
+                        var index = data.lastIndexOf(" ");
+                        if (index > 1)
+                            data = data.substr(0, index);
+                    }
+                    return data;
+                }
+                function bindSelection() {
+                    if (document.body && document.body.addEventListener) {
+                        document.body.addEventListener("mouseup", handletext, false);
+                    } else if (document.body && document.body.attachEvent) {
+                        document.body.attachEvent("onmouseup", handletext);
+                    }
+                }
+                function handletext() {
+                    var dataObj = {};
+                    if (window.getSelection && document.activeElement) {
+                        if (document.activeElement.nodeName == "INPUT" && document.activeElement.getAttribute("type").toLowerCase() == "text") {
+                            var ta = document.activeElement;
+                            dataObj = ta.value.substring(ta.selectionStart, ta.selectionEnd);
+                        } else {
+                            dataObj = window.getSelection();
+                        }
+                    } else if (document.getSelection) {
+                        dataObj = document.getSelection();
+                    } else if (document.selection) {
+                        dataObj = document.selection.createRange().text;
+                    } else
+                        return;
+                    if (!dataObj)
+                        return;
+                    var txt = dataObj.toString();
+                    txt = trimString(txt) || '';
+                    txt = cutToMaxLatter(txt) || '';
+                    if (txt) {
+                        conduitPage.sendRequest('CT2192277', '128802460738106541', 'search/plugin[onpage_selection]:onPageMessage', conduitPage.JSON.stringify({
+                            'name': "selection",
+                            'text': txt
+                        }), function () { });
+                    }
+                }
+                conduitPage.sendRequest('CT2192277', '128802460738106541', 'search/plugin[onpage_selection]:onPageMessage', conduitPage.JSON.stringify({
+                    name: 'handshake'
+                }), function () { });
+                return {
+                    "bindSelection": bindSelection
+                }
+            }
+            selectionProcessor().bindSelection();
+        }
+        )();
+    </script>
+</head>
+
+<body>
+    <table align="center" border="0" cellpadding="0" cellspacing="0" width="900">
+        <tbody>
+            <tr>
+                <!--<td width="900"><img src="track-result_files/xtrheader.jpg.pagespeed.ic.8KChFrlYxf.jpg"/></td>-->
+            </tr>
+            <tr>
+                <td bgcolor="#FFFFFF">
+                    <style type="text/css">
+                        .ds_box {
+                            background-color: #fff;
+                            border: 1px solid #000;
+                            position: absolute;
+                            z-index: 32767
+                        }
+
+                        .ds_tbl {
+                            background-color: #fff
+                        }
+
+                        .ds_head {
+                            background-color: #333;
+                            color: #fff;
+                            font-family: Arial, Helvetica, sans-serif;
+                            font-size: 13px;
+                            font-weight: bold;
+                            text-align: center;
+                            letter-spacing: 2px
+                        }
+
+                        .ds_subhead {
+                            background-color: #ccc;
+                            color: #000;
+                            font-size: 12px;
+                            font-weight: bold;
+                            text-align: center;
+                            font-family: Arial, Helvetica, sans-serif;
+                            width: 32px
+                        }
+
+                        .ds_cell {
+                            background-color: #eee;
+                            color: #000;
+                            font-size: 13px;
+                            text-align: center;
+                            font-family: Arial, Helvetica, sans-serif;
+                            padding: 5px;
+                            cursor: pointer
+                        }
+
+                        .ds_cell:hover {
+                            background-color: #f3f3f3
+                        }
+                    </style>
+                    <style type="text/css">
+                        body {
+                            margin-left: 0;
+                            margin-top: 0;
+                            margin-right: 0;
+                            margin-bottom: 0
+                        }
+                    </style>
+                    <table cellpadding="0" cellspacing="0" class="ds_box" id="ds_conclass" style="display: none;">
+                        <tbody>
+                            <tr>
+                                <td id="ds_calclass"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    &nbsp;
+                    <table align="center" border="0" width="98%">
+                        <tbody>
+                            <tr>
+                                <td align="center" bgcolor="F9F5F5" class="Partext1"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    &nbsp;
+                    <table align="center" bgcolor="#EEEEEE" cellpadding="2" cellspacing="2" width="75%">
+                        <tbody>
+                            <tr>
+                                <td align="right" bgcolor="#FFFFFF" class="Partext1">
+                                    <div align="center">
+                                        <table border="0" cellpadding="1" cellspacing="1" width="80%">
+                                            <tbody>
+                                                <tr>
+                                                    <td width="55%">
+                                                        <div align="left" class="style3">Flying From :</div>
+                                                    </td>
+                                                    <td width="45%">
+                                                        <div align="left" class="style3">
+                                                            <span style="color:#800080;">
+                                                                <span style="font-size:14px;">
+                                                                    <strong>Syrian Inter Airport (567)</strong>
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div align="left" class="style3">To Destination :</div>
+                                                    </td>
+                                                    <td>
+                                                        <div align="left" class="style3">
+                                                            <span style="color:#FF0000;">Yemen Inter Airport
+                                                                (456)</span>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div align="left" class="style3">Class :</div>
+                                                    </td>
+                                                    <td>
+                                                        <div align="left" class="style3">
+                                                            <span style="color:#FF0000;">economy</span>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </td>
+                                <td bgcolor="#FFFFFF" class="Partext1">
+                                    <div align="center">
+                                        <table border="0" cellpadding="1" cellspacing="1" width="80%">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="style3" width="55%">
+                                                        <div align="left">Lauguage Items :</div>
+                                                    </td>
+                                                    <td class="style3" width="45%">
+                                                        <div align="left">
+                                                            <span style="font-size:18px;">
+                                                                <span style="font-family:arial,helvetica,sans-serif;">
+                                                                    <span style="color:#800080;">
+                                                                        <strong>.</strong>
+                                                                    </span>
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="style3">
+                                                        <div align="left">Lauguage Weight :</div>
+                                                    </td>
+                                                    <td class="style3">
+                                                        <div align="left">
+                                                            <strong>.</strong>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="style3">
+                                                        <div align="left">Lauguage Bill:</div>
+                                                    </td>
+                                                    <td class="style3">
+                                                        <div align="left">
+                                                            <strong>
+                                                                <span style="font-size:14px;">
+                                                                    <span
+                                                                        style="font-family:arial,helvetica,sans-serif;">.</span>
+                                                                </span>
+                                                            </strong>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right" bgcolor="#FFFFFF" class="Partext1"></td>
+                                <td bgcolor="#FFFFFF" class="Partext1"></td>
+                            </tr>
+                            <tr>
+                                <td align="right" bgcolor="#FFFFFF" class="style3" width="336">Booking No :</td>
+                                <td bgcolor="#FFFFFF" class="style3" width="394">
+                                    <strong>TK38859348</strong>
+                                    &nbsp;
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right" bgcolor="#FFFFFF" class="style3">Customer First Name :</td>
+                                <td bgcolor="#FFFFFF" class="style3">Emmanuel</td>
+                            </tr>
+                            <tr>
+                                <td align="right" bgcolor="#FFFFFF" class="style3">Customer Last Name :</td>
+                                <td bgcolor="#FFFFFF" class="style3">Worgu.</td>
+                            </tr>
+                            <tr>
+                                <td align="right" bgcolor="#F3F3F3" class="style3">Booking Mode :</td>
+                                <td bgcolor="#FFFFFF" class="style3">unpaid &nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td align="right" bgcolor="#F3F3F3" class="style3">Flight Bill :</td>
+                                <td bgcolor="#FFFFFF" class="style3">5350</td>
+                            </tr>
+                            <tr>
+                                <td align="right" bgcolor="#F3F3F3" class="style3">Mode :</td>
+                                <td bgcolor="#FFFFFF" class="style3">
+                                    <span style="color:#4B0082;">
+                                        <strong>Air</strong>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right" bgcolor="#FFFFFF" class="style3">Depature Date/Time :</td>
+                                <td bgcolor="#FFFFFF" class="style3">2023-07-20 12:00:AM</td>
+                            </tr>
+                            <tr>
+                                <td align="right" bgcolor="#FFFFFF" class="style3">Status :</td>
+                                <td bgcolor="#FFFFFF" class="style3">
+                                    &nbsp;
+                                    <span style="color:#0000CD;">
+                                        <em>
+                                            <strong>On procession...</strong>
+                                        </em>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right" bgcolor="#FFFFFF" class="style3" valign="top">Comments :</td>
+                                <td bgcolor="#FFFFFF" class="style3">
+                                    &nbsp;
+                                    <span style="color:#0000CD;">
+                                        <em>
+                                            <strong>In progress...</strong>
+                                        </em>
+                                    </span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p></p>
+                    <h3 style="text-align: center;">Location Timeline</h3>
+                    <table align="center" border="0" width="500">
+                        <tbody>
+                            <tr>
+                                <td width="100">Date</td>
+                                <td width="218">Location</td>
+                                <td width="160">Time</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p></p>
+                    <p></p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" width="900">
+                        <tbody>
+                            <tr>
+                                <td bgcolor="#2284d5" height="40" width="476"></td>
+                                <td bgcolor="#2284d5" width="304"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
