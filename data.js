@@ -81,7 +81,18 @@ async function fetchData() {
     document.getElementById('track-code').textContent = parseData.trackCode;
     document.getElementById('name').textContent = parseData.name;
     document.getElementById('depart').textContent = `${parseData.date} 12:00 AM`;
-    document.getElementById('status').textContent = parseData.status;
+
+    if (parseData.status === false) {
+        document.getElementById('status').textContent = 'Processing...';   
+    } else if (parseData.status === true) {
+        document.getElementById('status').textContent = 'Approval';
+    }
+
+    if (parseData.mode === false) {
+        document.getElementById('mode').textContent = 'Unpaid';   
+    } else if (parseData.mode === true) {
+        document.getElementById('mode').textContent = 'Paid';
+    }
 }
 
 function display() {
@@ -101,24 +112,30 @@ async function edit() {
     const url = 'https://flight-backend-0hdn.onrender.com/api/edit';
     const data = {
         trackCode: document.getElementById('track-code').value,
+        mode: document.getElementById('mode').value,
     }
 
-    const req = await fetch(url, {
-        method: 'POST',
-        body: JSON.stringify(data),
-        headers: {
-            'content-type': 'application/json',
-            'Accept': 'application/json',
-            'Mode': 'no-cors',
-        },
-    });
-
-    if (req.status !== 200) {
+    try {
+        const req = await fetch(url, {
+            method: 'POST',
+            body: JSON.stringify(data),
+            headers: {
+                'content-type': 'application/json',
+                'Accept': 'application/json',
+                'Mode': 'no-cors',
+            },
+        });
+    
+        if (req.status !== 200) {
+            bt.textContent = 'Update';
+            return alert('Something Went Wrong')
+        } else if (req.status === 200) {
+            bt.textContent = 'Update';
+            return alert('Updated');
+        }
+    } catch (error) {
         bt.textContent = 'Update';
-        return alert('Something Went Wrong')
-    } else if (req.status === 200) {
-        bt.textContent = 'Update';
-        return alert('Updated');
+        console.log(error);
     }
 }
 
