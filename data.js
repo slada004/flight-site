@@ -44,7 +44,7 @@ async function getData() {
     const data = {
         trackCode,
     }
-    const url = 'http://localhost:5000/api/track-data';
+    const url = 'https://flight-backend-0hdn.onrender.com/api/track-data';
     const req = await fetch(url, {
         method: 'POST',
         body: JSON.stringify(data),
