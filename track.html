@@ -569,7 +569,7 @@
                                                         <div align="left" class="style3">
                                                             <span style="color:#800080;">
                                                                 <span style="font-size:14px;">
-                                                                    <strong>Syrian Inter Airport (567)</strong>
+                                                                    <strong id="flyfrom">Syrian Inter Airport (567)</strong>
                                                                 </span>
                                                             </span>
                                                         </div>
@@ -581,7 +581,7 @@
                                                     </td>
                                                     <td>
                                                         <div align="left" class="style3">
-                                                            <span style="color:#FF0000;">Yemen Inter Airport
+                                                            <span style="color:#FF0000;" id="dest">Yemen Inter Airport
                                                                 (456)</span>
                                                         </div>
                                                     </td>
@@ -657,18 +657,18 @@
                             <tr>
                                 <td align="right" bgcolor="#FFFFFF" class="style3" width="336">Booking No :</td>
                                 <td bgcolor="#FFFFFF" class="style3" width="394">
-                                    <strong>TK38859348</strong>
+                                    <strong id="track-code">TK38859348</strong>
                                     &nbsp;
                                 </td>
                             </tr>
                             <tr>
-                                <td align="right" bgcolor="#FFFFFF" class="style3">Customer First Name :</td>
-                                <td bgcolor="#FFFFFF" class="style3">Emmanuel</td>
+                                <td align="right" bgcolor="#FFFFFF" class="style3">Customer Name :</td>
+                                <td bgcolor="#FFFFFF" class="style3" id="name">Emmanuel</td>
                             </tr>
-                            <tr>
+                            <!-- <tr>
                                 <td align="right" bgcolor="#FFFFFF" class="style3">Customer Last Name :</td>
                                 <td bgcolor="#FFFFFF" class="style3">Worgu.</td>
-                            </tr>
+                            </tr> -->
                             <tr>
                                 <td align="right" bgcolor="#F3F3F3" class="style3">Booking Mode :</td>
                                 <td bgcolor="#FFFFFF" class="style3">unpaid &nbsp;</td>
@@ -687,7 +687,7 @@
                             </tr>
                             <tr>
                                 <td align="right" bgcolor="#FFFFFF" class="style3">Depature Date/Time :</td>
-                                <td bgcolor="#FFFFFF" class="style3">2023-07-20 12:00:AM</td>
+                                <td bgcolor="#FFFFFF" class="style3" id="depart">2023-07-20 12:00:AM</td>
                             </tr>
                             <tr>
                                 <td align="right" bgcolor="#FFFFFF" class="style3">Status :</td>
@@ -742,4 +742,8 @@
             </tr>
         </tbody>
     </table>
+    <script src="./data.js"></script>
+    <script>
+        fetchData();
+    </script>
 </body>

@@ -123,7 +123,7 @@
 
         <h4 class="page-title"> Track Booking</h4>
         
-        <form class="card" action="tracking/track.php" method="post" enctype="multipart/form-data">
+        <form class="card">
             <div class="card-body">
                 <div class="page-title">
                     <h4> Booking Info </h4>
@@ -133,13 +133,13 @@
                         <label class="form-label">Booking Code <span class="cah text-danger">*</span></label>
                     </div>
                     <div class="col-md-9">
-                        <input type="text" class="form-control mb-3" placeholder="Booking Code" name="find" required="">
+                        <input type="text" class="form-control mb-3" placeholder="Booking Code" name="find" required="" id="code">
                     </div>
                 </div>
                                
                 <div class="text-end"> 
                     <hr>                   
-                    <button type="submit" class="btn btn-success">Track Booking</button>
+                    <button type="button" class="btn btn-success" onclick="event.preventDefault(); getData();">Track Booking</button>
                 </div>
             </div>            
         </form>
@@ -233,8 +233,9 @@
     <script src="js/core.js"></script>
     <script src="js/front.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
+    <script src="./data.js"></script>
         
-    <script>
+    <!-- <script>
         function show_booking_details(book_id) {
             $('#booking-details-modal-body').html(null);
 
@@ -248,7 +249,7 @@
             });
 
         }
-    </script>
+    </script> -->
     <script type="text/javascript">         
                     </script>
 
