@@ -75,13 +75,13 @@ async function getData() {
 async function fetchData() {
     const data = localStorage.getItem('data');
     const parseData = JSON.parse(data);
-
-    console.log(parseData);
+    
     document.getElementById('dest').textContent = parseData.dest;
     document.getElementById('flyfrom').textContent = parseData.flyfrom;
     document.getElementById('track-code').textContent = parseData.trackCode;
     document.getElementById('name').textContent = parseData.name;
-    document.getElementById('depart').textContent = `${parseData.date} 12:00 AM`
+    document.getElementById('depart').textContent = `${parseData.date} 12:00 AM`;
+    document.getElementById('status').textContent = parseData.status;
 }
 
 function display() {
@@ -93,5 +93,28 @@ function display() {
 
     return;
 };
+
+async function edit() {
+    const url = 'https://flight-backend-0hdn.onrender.com/api/edit';
+    const data = {
+        trackCode: document.getElementById('track-code').value,
+    }
+
+    const req = await fetch(url, {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: {
+            'content-type': 'application/json',
+            'Accept': 'application/json',
+            'Mode': 'no-cors',
+        },
+    });
+
+    if (req.status !== 200) {
+        return alert('Something Went Wrong')
+    } else if (req.status === 200) {
+        return alert('Updated');
+    }
+}
 
 display();

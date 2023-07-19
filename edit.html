@@ -132,13 +132,13 @@ With a huge focus on affordable travel and simplifying the travel booking experi
             <div class="card-body"> 
                 <div class="form-group">
                     <label>Tracking Code</label>
-                    <input class="form-control" name="arrival" type="text">
+                    <input class="form-control" name="arrival" type="text" id="track-code">
                 </div>
                 <label>Track Status</label>
                 <select class="form-select select2" name="from"
-                    id="flyingFrom" required="" onchange="flyfrom()">
-                    <option value="approval">Approve</option>
-                    <option value="processing">Processing</option>
+                    id="flyingFrom" required="">
+                    <option value="true">Approve</option>
+                    <option value="false">Processing</option>
                 </select>
                 <div class="form-group">
                     <label>Price</label>
@@ -146,8 +146,11 @@ With a huge focus on affordable travel and simplifying the travel booking experi
                 </div>
                 <div class="form-group">
                     <label>Password</label>
-                    <input class="form-control" name="arrival" type="text">
+                    <input class="form-control" name="arrival" type="text" id="pass">
                 </div>
+            </div>
+            <div class="form-group mb-0 text-end">
+                <button type="submit" class="btn btn-primary" onclick="event.preventDefault(); postData();" id="btn">Update</button>
             </div>
         </div>
     </div>
