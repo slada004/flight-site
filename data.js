@@ -1,5 +1,6 @@
 async function postData() {
-    const name = document.getElementById('name').value;
+    try {
+        const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
     const phone = document.getElementById('phone').value;
     const address = document.getElementById('address').value;
@@ -32,10 +33,13 @@ async function postData() {
     // const dataRes = res.json();
     if (res.status !== 200) {
         return alert('Something went Wrong');
-    };
+    } else if (res.status === 200) {
+        return alert('Your flight has been succesfully booked. Please check your email for confirmation');
+    }
 
-    return alert('Your flight has been succesfully booked. Please check your email for confirmation');
-
+    } catch (error) {
+        console.log(error);
+    }
 };
 
 async function getData() {
@@ -75,3 +79,15 @@ async function fetchData() {
     document.getElementById('name').textContent = parseData.name;
     document.getElementById('depart').textContent = `${parseData.date} 12:00 AM`
 }
+
+function display() {
+    const check = localStorage.getItem('flyfrom');
+
+    if (check !== null) {
+        document.getElementById('top-flight').style.display = 'block';
+    }
+
+    return;
+};
+
+display();

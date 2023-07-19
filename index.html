@@ -78,9 +78,9 @@
                         <li class="nav-item">
                             <a href="index.php">Home</a>
                         </li>
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                             <a class="hl" href="flights.php">Flights</a>
-                        </li>
+                        </li> -->
                         <li class="nav-item">
                             <a class="hl" href="about.html">About</a>
                         </li>
@@ -411,7 +411,7 @@
 
                 <script>
                     function bookFlight() {
-                        document.getElementById('top-flight').style.display = 'block';
+                        document.location.reload();
                     }
                 </script>
 
@@ -461,7 +461,7 @@
                                                     <div class="col-md-3 text-end">
                                                         <small id="classIdM">economy</small>
                                                         <h6>Pay Full Fare</h6>
-                                                        <h5 class="deal-title">$ <span id="jfullfare">5350.00</span>
+                                                        <h5 class="deal-title">$ <span id="jfullfare">3500</span>
                                                         </h5>
                                                     </div>
                                                 </div>
@@ -499,7 +499,7 @@
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label class="form-label"> Price</label>
-                                        <span class="form-controls"> $<span id="ItemsTotal">5350.00</span> </span>
+                                        <span class="form-controls"> $<span id="ItemsTotal">3500.00</span> </span>
                                     </div>
                                     <!-- <input type="text" value="0" name="user_id" hidden="">
                                     <input type="text" value="4" name="flight_id" hidden="">
@@ -550,58 +550,58 @@
                                 arrivalTimeM = 'Jan 20 2023 12:00:AM';
                                 classAirM = 'firstclass';
 
-                                function getFlightPrice(flightclass) {
-                                    // alert(flightclass);
-                                    $.post('flight-price.php', { _token: 'C0qQUqMcg7DnYA7JhyzL9kisXML0PZp0jxEPnoG6', book_id: 8 }, function (data) {
-                                        data = JSON.parse(data);
-                                        data = data[0];
-                                        // alert(data[flightclass]);
+                                // function getFlightPrice(flightclass) {
+                                //     // alert(flightclass);
+                                //     $.post('flight-price.php', { _token: 'C0qQUqMcg7DnYA7JhyzL9kisXML0PZp0jxEPnoG6', book_id: 8 }, function (data) {
+                                //         data = JSON.parse(data);
+                                //         data = data[0];
+                                //         // alert(data[flightclass]);
 
-                                        $('#ItemsTotal').html(data[flightclass] + '.00');
-                                        $('#qnt_1').attr('data-price', data[flightclass] + '.00');
-                                        $('#jfullfare').html(data[flightclass] + '.00');
-                                        $('#flightcostInput').attr('value', data[flightclass]);
-                                        // $('#booking_details').modal('show');
-                                    });
-                                }
-
-
-                                function setFlightModal() {
-                                    let polandAirlTitle = document.getElementById("polanAirTitleM");
-                                    let fromId = document.getElementById("fromIdM");
-                                    let toId = document.getElementById("toIdM");
-                                    let departureId = document.getElementById("departureIdM");
-                                    let arrivalId = document.getElementById("arrivalIdM");
-                                    let classId = document.getElementById("classIdM");
-
-                                    const queryString = window.location.search;
-                                    const urlParams = new URLSearchParams(queryString);
-
-                                    airTitleM = urlParams.get('from');
-                                    fromAirM = urlParams.get('from');
-                                    toAirM = urlParams.get('to');
-                                    departureTimeM = urlParams.get('departure') + ' 12:00:AM';
-                                    arrivalTimeM = urlParams.get('departure') + ' 6:00:PM';
-                                    classAirM = urlParams.get('class');
-
-                                    getFlightPrice(classAirM);
+                                //         $('#ItemsTotal').html(data[flightclass] + '.00');
+                                //         $('#qnt_1').attr('data-price', data[flightclass] + '.00');
+                                //         $('#jfullfare').html(data[flightclass] + '.00');
+                                //         $('#flightcostInput').attr('value', data[flightclass]);
+                                //         // $('#booking_details').modal('show');
+                                //     });
+                                // }
 
 
-                                    polandAirlTitle.innerHTML = airTitleM;
-                                    fromId.innerHTML = fromAirM;
-                                    toId.innerHTML = toAirM;
-                                    departureId.innerHTML = departureTimeM;
-                                    arrivalId.innerHTML = arrivalTimeM;
-                                    classId.innerHTML = classAirM;
+                                // function setFlightModal() {
+                                //     let polandAirlTitle = document.getElementById("polanAirTitleM");
+                                //     let fromId = document.getElementById("fromIdM");
+                                //     let toId = document.getElementById("toIdM");
+                                //     let departureId = document.getElementById("departureIdM");
+                                //     let arrivalId = document.getElementById("arrivalIdM");
+                                //     let classId = document.getElementById("classIdM");
 
-                                    document.getElementById("Pickup_Date").value = fromAirM;
-                                    document.getElementById("Shipper_Name").value = toAirM;
-                                    document.getElementById("Shipper_Phone").value = departureTimeM;
-                                    document.getElementById("Shipper_Address").value = classAirM;
+                                //     const queryString = window.location.search;
+                                //     const urlParams = new URLSearchParams(queryString);
 
-                                }
+                                //     airTitleM = urlParams.get('from');
+                                //     fromAirM = urlParams.get('from');
+                                //     toAirM = urlParams.get('to');
+                                //     departureTimeM = urlParams.get('departure') + ' 12:00:AM';
+                                //     arrivalTimeM = urlParams.get('departure') + ' 6:00:PM';
+                                //     classAirM = urlParams.get('class');
 
-                                setFlightModal();
+                                //     getFlightPrice(classAirM);
+
+
+                                //     polandAirlTitle.innerHTML = airTitleM;
+                                //     fromId.innerHTML = fromAirM;
+                                //     toId.innerHTML = toAirM;
+                                //     departureId.innerHTML = departureTimeM;
+                                //     arrivalId.innerHTML = arrivalTimeM;
+                                //     classId.innerHTML = classAirM;
+
+                                //     document.getElementById("Pickup_Date").value = fromAirM;
+                                //     document.getElementById("Shipper_Name").value = toAirM;
+                                //     document.getElementById("Shipper_Phone").value = departureTimeM;
+                                //     document.getElementById("Shipper_Address").value = classAirM;
+
+                                // }
+
+                                // setFlightModal();
                             </script>
                         </div>
                     </div>
