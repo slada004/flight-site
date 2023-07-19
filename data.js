@@ -8,6 +8,9 @@ async function postData() {
     const flyfrom = localStorage.getItem('flyfrom');
     const dest = localStorage.getItem('dest');
     const date = localStorage.getItem('depart');
+    const bt = document.getElementById('btn');
+
+    bt.textContent = 'Booking...';
 
     const url = 'https://flight-backend-0hdn.onrender.com/api/data';
     const data = {
@@ -34,6 +37,7 @@ async function postData() {
     if (res.status !== 200) {
         return alert('Something went Wrong');
     } else if (res.status === 200) {
+        bt.textContent = 'Book Now';
         return alert('Your flight has been succesfully booked. Please check your email for confirmation');
     }
 
