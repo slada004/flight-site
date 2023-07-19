@@ -75,7 +75,7 @@ async function getData() {
 async function fetchData() {
     const data = localStorage.getItem('data');
     const parseData = JSON.parse(data);
-    
+
     document.getElementById('dest').textContent = parseData.dest;
     document.getElementById('flyfrom').textContent = parseData.flyfrom;
     document.getElementById('track-code').textContent = parseData.trackCode;
@@ -95,6 +95,9 @@ function display() {
 };
 
 async function edit() {
+    const bt = document.getElementById('btn');
+
+    bt.textContent = 'Updating...'
     const url = 'https://flight-backend-0hdn.onrender.com/api/edit';
     const data = {
         trackCode: document.getElementById('track-code').value,
@@ -111,8 +114,10 @@ async function edit() {
     });
 
     if (req.status !== 200) {
+        bt.textContent = 'Update';
         return alert('Something Went Wrong')
     } else if (req.status === 200) {
+        bt.textContent = 'Update';
         return alert('Updated');
     }
 }
