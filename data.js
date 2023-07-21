@@ -159,7 +159,7 @@ async function edit() {
 }
 
 async function country() {
-    const url = 'https://flight-backend-0hdn.onrender.com/api/country';
+    const url = 'https://flight-backend-0hdn.onrender.com/api/add-country';
 
     const req = await fetch(url, {
         method: 'GET',
@@ -171,6 +171,7 @@ async function country() {
     });
 
     const res = req.json();
+    console.log(res);
 
     localStorage.setItem('countStatus', res.msg.status);
 };
