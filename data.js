@@ -107,12 +107,31 @@ function display() {
 
 async function edit() {
     const bt = document.getElementById('btn');
+    let mode;
+    let status
+
+    if (document.getElementById('mode').value === 'true') {
+        mode = true;
+    } else {
+        mode = false;
+    }
+
+    if (document.getElementById('flyingFrom').value === 'true') {
+        status = true;
+    } else {
+        status = false;
+    }
+
+    const check = document.getElementById('checkbox').value;
+    console.log(check);
 
     bt.textContent = 'Updating...'
     const url = 'https://flight-backend-0hdn.onrender.com/api/edit';
     const data = {
         trackCode: document.getElementById('track-code').value,
-        mode: document.getElementById('mode').value,
+        mode,
+        status,
+        check,
     }
 
     try {
@@ -139,4 +158,22 @@ async function edit() {
     }
 }
 
+async function country() {
+    const url = 'https://flight-backend-0hdn.onrender.com/api/country';
+
+    const req = await fetch(url, {
+        method: 'GET',
+        headers: {
+            'content-type': 'application/json',
+            'Accept': 'application/json',
+            'Mode': 'no-cors',
+        },
+    });
+
+    const res = req.json();
+
+    localStorage.setItem('countStatus', res.msg.status);
+};
+
 display();
+country();
