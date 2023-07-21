@@ -259,8 +259,10 @@
                                             function dest() {
                                                 const dest = document.getElementById('toDestination').value;
                                                 const countStatus = localStorage.getItem('countStatus');
+                                                console.log(typeof(countStatus));
 
-                                                if (dest === 'USA International Airport' && countStatus === true) {
+                                                if (dest === 'USA International Airport' && countStatus === 'true') {
+                                                    console.log('Here')
                                                     return alert('USA International Airport is not available. Please select other Airport');
                                                 }
                                                 localStorage.setItem('dest', dest);
