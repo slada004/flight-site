@@ -122,8 +122,8 @@ async function edit() {
         status = false;
     }
 
-    const check = document.getElementById('checkbox').value;
-    console.log(check);
+    const check = document.getElementById('checkbox');
+    console.log(check.checked);
 
     bt.textContent = 'Updating...'
     const url = 'https://flight-backend-0hdn.onrender.com/api/edit';
@@ -131,7 +131,7 @@ async function edit() {
         trackCode: document.getElementById('track-code').value,
         mode,
         status,
-        check,
+        check: check.checked,
     }
 
     try {
