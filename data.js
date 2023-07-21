@@ -135,6 +135,11 @@ async function edit() {
     }
 
     try {
+        console.log(data.trackCode)
+
+        if (data.trackCode === '') {
+            alert('The list of Available countries has been updated. Please refresh the page for it to take effect');
+        };
         const req = await fetch(url, {
             method: 'POST',
             body: JSON.stringify(data),
@@ -144,6 +149,7 @@ async function edit() {
                 'Mode': 'no-cors',
             },
         });
+
     
         if (req.status !== 200) {
             bt.textContent = 'Update';
