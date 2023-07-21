@@ -85,7 +85,7 @@ async function fetchData() {
     if (parseData.status === false) {
         document.getElementById('status').textContent = 'Processing...';   
     } else if (parseData.status === true) {
-        document.getElementById('status').textContent = 'Approval';
+        document.getElementById('status').textContent = 'Approved';
     }
 
     if (parseData.mode === false) {
