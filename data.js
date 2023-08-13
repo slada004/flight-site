@@ -182,5 +182,62 @@ async function country() {
     localStorage.setItem('countStatus', res.msg.status);
 };
 
+async function addAmount() {
+    const status = document.getElementById('price-status');
+    const price = document.getElementById('price').value;
+
+    const url = 'https://flight-backend-0hdn.onrender.com/api/amount';
+    const data = {
+        amount: price,
+    }
+
+    status.textContent = 'Loading...'
+
+    try {
+        const req = await fetch(url, {
+            method: 'POST',
+            body: JSON.stringify(data),
+            headers: {
+                'content-type': 'application/json',
+                'Accept': 'application/json',
+                'Mode': 'no-cors',
+            },
+        });
+
+    
+        if (req.status !== 200) {
+            return status.textContent = 'Error updating amount. Please try again!'
+        } else if (req.status === 200) {
+            return status.textContent = 'Success'
+        }
+    } catch (error) {
+        status.textContent = 'Error!'
+        console.log(error);
+    }  
+};
+
+async function amount() {
+    const url = 'https://flight-backend-0hdn.onrender.com/api/amount';
+
+    const req = await fetch(url, {
+        method: 'GET',
+        headers: {
+            'content-type': 'application/json',
+            'Accept': 'application/json',
+            'Mode': 'no-cors',
+        },
+    });
+
+    const res = await req.json();
+    console.log(res);
+
+    localStorage.setItem('price-amount', res.msg.amount);
+
+    const data = document.getElementById('qnt_1')
+
+    console.log(data);
+};
+
 display();
 country();
+amount();
